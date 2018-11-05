@@ -3,7 +3,7 @@ Repository for the @cards-against-humanity Discord bot.
 You can add the bot to your server and view a list of commands here:  
 https://discordbots.org/bot/429024440060215296
 
-# Self Hosted
+## Self Hosted
 ```
 mkdir src/
 cd src/
@@ -29,3 +29,7 @@ pip install discord.py aiosqlite
 cd cah-bot/src
 python cahbot1.py
 ```
+
+Setup: Make a bot application for your new CAH bot. And add a bot user.
+Get the token and add it to config.yaml 
+
