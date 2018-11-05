@@ -2,7 +2,7 @@ import discord
 
 from shard import Shard
 
-client = discord.Client(shard_id=0, shard_count=4)
+client = discord.Client()
 
 @client.event
 async def on_ready():

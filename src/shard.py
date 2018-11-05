@@ -9,6 +9,7 @@ from cardcast import api
 import config
 import info
 import tokens
+import yaml
 
 class Shard:
     def __init__(self, shard, client, num_shards=4):       
@@ -896,9 +897,10 @@ class Shard:
     
     def run(self):
         self.client.loop.create_task(self.timer_check())
-        if self.shard != 0: self.client.loop.create_task(self.blank_check())
-        
-        # beta token
-        #self.client.run(tokens.beta_id)
-        # live token
-        self.client.run(tokens.live_id)
+        with open("config.yaml", 'r') as stream:
+            try:
+                cfg = yaml.load(stream)
+            except yaml.YAMLError as exc:
+                print(exc)
+        discord_bot_token = cfg['token']
+        self.client.run(discord_bot_token)
