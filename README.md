@@ -7,7 +7,7 @@ https://discordbots.org/bot/429024440060215296
 ```
 mkdir src/
 cd src/
-wget https://www.python.org/ftp/python/3.6.0/Python-3.6.0.tgz
+wget https://www.python.org/ftp/python/3.6.7/Python-3.6.7.tgz
 ./configure --prefix=/home/${USER}/src/Python36/
 make && make install
 sudo apt-get install python-virtualenv
